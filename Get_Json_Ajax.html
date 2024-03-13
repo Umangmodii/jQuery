@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Json | jQuery</title>
+
+    <script type = "text/javascript" 
+    src = "https://www.tutorialspoint.com/jquery/jquery-3.6.0.js">
+    </script>
+
+</head>
+<body>
+
+    <p>Click on the button to load result.json file −</p>
+		
+    <div id = "stage" style = "background-color:darkgoldenrod">
+       STAGE
+    </div>
+      
+    <input type = "button" id = "driver" value = "Load Data" />
+    
+</body>
+</html>
+
+<script>
+
+    $(document).ready(function() {
+           $("#driver").click(function(event) {
+
+                $.getJSON('result.json', function(Data) {
+                        $('#stage').html("<p> Id : " + Data.id + "</p>")
+                        $('#stage').append("<p> Name : " + Data.name + "</p>")
+                        $('#stage').append("<p> City : " + Data.city + "</p>")
+                        $('#stage').append("<p> State : " + Data.state + "</p>")
+                        $('#stage').append("<p> Country : " + Data.country + "</p>");
+                });
+           });
+    });
+
+
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute | jQuery</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <p>Click the below button to see the result:</p>
+   
+   <p><a id="home" href="jquery-attributes.html" title="Umang Modi">Github</a></p>
+   <button>Get Attribute</button>
+    
+</body>
+</html>
+
+<script>
+
+    $(document).ready(function() {
+        $('button').click(function() {
+                alert("Url is : " + $('#home').attr("href"));
+                alert("Title is : " + $('#home').attr("title")); 
+
+        });
+    });
+
+</script>
