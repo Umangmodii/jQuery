@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove | jQuery</title>
+    <script src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>jQuery remove(selector) Method</h2>
+        <div class="hello">Hello</div>
+        <div class="goodbye">Goodbye</div>
+     </div>
+     <br>
+     
+     <button> Remove Text </button>
+    
+</body>
+</html>
+
+<script>
+
+    $(document).ready(function() {
+            $('button').click(function() {
+                    $('div').remove('.goodbye');
+            });
+    });
+
+</script>
